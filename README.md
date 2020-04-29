@@ -24,3 +24,5 @@
         return pwd
     来自https://groups.google.com/forum/#!topic/python-cn/_NW0NJvpNrU
     
+    注：如果使用%SystemRoot%\explorer.exe "your_relpath\app.exe [your_args]"创建快捷方式， 则程序内部建立文件需都改为绝对路径。
+    
