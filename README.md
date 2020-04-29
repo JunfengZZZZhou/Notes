@@ -7,3 +7,9 @@
     从网上看来得方法。建立一个__init__.py文件， 里面写上：
     import os, sys; sys.path.append(os.path.dirname(os.path.realpath(__file__)))
     解决问题。
+
+## 3、如何创建相对路径快捷方式
+    首先建立一个快捷方式
+    打开改快捷方式的属性
+    设置“目标”为：%windir%\system32\cmd.exe /c start your_relpath\app.exe [your_args]
+    
