@@ -12,4 +12,15 @@
     首先建立一个快捷方式
     打开改快捷方式的属性
     设置“目标”为：%windir%\system32\cmd.exe /c start your_relpath\app.exe [your_args]
+    或者 设置“目标”为： %windir%\explorer.exe your_relpath\app.exe [your_args]
+
+## 4、关于python打包之后，相对路径快捷方式得到的路径不正确的问题
+    sys.path[0]在Python脚本文件中返回的是文件夹的路径E:\test（脚本路径为E:\test\updater.py），而通过py2exe打包后的exe文件返回的却是该exe的路径E:\test\updater.exe（exe程序路径为E:\test\updater.exe），为了兼容这两种方式写了一个函数用于获取当前路径：
+
+    def getpwd():
+        pwd = sys.path[0]
+        if os.path.isfile(pwd):
+            pwd = os.path.dirname(pwd)
+        return pwd
+    来自https://groups.google.com/forum/#!topic/python-cn/_NW0NJvpNrU
     
