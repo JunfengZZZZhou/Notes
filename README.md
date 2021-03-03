@@ -25,4 +25,11 @@
     来自https://groups.google.com/forum/#!topic/python-cn/_NW0NJvpNrU
     
     注：如果使用%SystemRoot%\explorer.exe "your_relpath\app.exe [your_args]"创建快捷方式， 则程序内部建立文件需都改为绝对路径。
-    
+ 
+## 5、clion 项目启动后无法找到header
+  在cmakelist里面加入
+  include_directories("/usr/include/eigen") 
+  build
+  然后去掉这句
+  build
+  好了
